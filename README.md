@@ -346,7 +346,7 @@ list(zip(argmax, ''.join([characters2[x] for x in argmax])))
 
 这里随机出来的验证码很厉害，是`O0OP`，不过更厉害的是模型认出来了。
 
-![](https://raw.githubusercontent.com/ypwhs/resources/master/captcha/00OP.png)
+![](https://raw.githubusercontent.com/ypwhs/resources/master/captcha/O0OP.png)
 
 # 有趣的问题
 
