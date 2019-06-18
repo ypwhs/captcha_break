@@ -507,6 +507,10 @@ plt.imshow(X[0], cmap='gray')
 
 模型的大小是12.8MB，准确率达到了惊人的 99.21%，即使连 0 和 O 都能精准区分，非常成功。
 
+# 扩展
+
+如果你比较喜欢 PyTorch，可以看 [ctc_pytorch.ipynb](ctc_pytorch.ipynb)，精度更高，达到了 99.57%。
+
 如果你想查看更多经验，可以看看我在百度云魅族深度学习应用大赛的代码和思路：[https://github.com/ypwhs/baiduyun_deeplearning_competition](https://github.com/ypwhs/baiduyun_deeplearning_competition)
 
 # 参考链接
