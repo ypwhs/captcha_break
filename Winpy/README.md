@@ -1,6 +1,6 @@
 ﻿## Windows下pytorch多进程可能出现的问题
 
-如果直接在WIndow下jupyter notebook直接运行ctc_pytorch.ipynb可能会出现如下的报错
+如果直接在WIndows下jupyter notebook直接运行ctc_pytorch.ipynb可能会出现如下的报错
 
 ```
 > Runtime Error with DataLoader（PID XXX）: exited unexpectedly
