@@ -160,7 +160,7 @@ class Model(nn.Module):
         x = x.permute(2, 0, 1)
         x, _ = self.lstm(x)
         x = self.fc(x)
-        return x.permute(0, 1, 2)
+        return x.permute(1, 0, 2)
 
 
 """## 测试模型输出尺寸"""
