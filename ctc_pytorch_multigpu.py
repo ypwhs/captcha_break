@@ -157,10 +157,10 @@ class Model(nn.Module):
     def forward(self, x):
         x = self.cnn(x)
         x = x.reshape(x.shape[0], -1, x.shape[-1])
-        x = x.permute(0, 2, 1)
+        x = x.permute(2, 0, 1)
         x, _ = self.lstm(x)
         x = self.fc(x)
-        return x
+        return x.permute(0, 1, 2)
 
 
 """## 测试模型输出尺寸"""
@@ -282,14 +282,3 @@ for epoch in range(1, epochs + 1):
     valid(model, optimizer, epoch, valid_loader)
     torch.save(model, "ctc.pth")
 
-
-from PIL import Image
-
-model.load_state_dict(torch.load("ctc.pth").state_dict())
-model.eval()
-iamge = Image.open("rancode.jpg")
-output = model(image.unsqueeze(0).cuda())
-output_argmax = output.detach().permute(1, 0, 2).argmax(dim=-1)
-print("pred:", decode(output_argmax[0]))
-
-# torch.save(model, "ctc.pth")
